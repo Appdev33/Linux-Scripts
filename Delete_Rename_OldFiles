@@ -1,0 +1,9 @@
+# !/bin/bash
+# Author Appdev33
+# Tue May  4 16:29:52 IST 2021
+# Description : Deletes Old files than 90 days
+# Modified: Tue May  4 16:29:52 IST 2021
+
+read -p  "Enter No. of Days to Delete Files For" DAYS
+find /home/nr/Desktop/Scripts/tmp -mtime +${DAYS} -exec ls -l {} \;
+find /home/nr/Desktop/Scripts/tmp -mtime +${DAYS} -exec rm {} \;
