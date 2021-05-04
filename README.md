@@ -1,5 +1,5 @@
 # Linux-Scripts
-All Linux Projects Here
+List Of All Scripts Descriptions
 
 1. Ping_Status.sh --- Script Check Status of valid IP's
 2. Search_file.sh --- Script to Find a particular extension files in a folder
