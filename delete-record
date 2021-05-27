@@ -1,0 +1,14 @@
+echo Please enter hostname or IP address?
+read host
+echo
+
+        grep -q $host /home/nr/Desktop/Scripts/tmp/database
+        if [ $? -eq 0 ]
+        then
+        echo
+        sed -i '/'$host'/d' /home/nr/Desktop/Scripts/tmp/database
+        echo $host has been deleted
+        else
+        echo Record does not exist
+        fi
+

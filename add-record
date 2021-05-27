@@ -1,0 +1,37 @@
+# Author Appdev33
+# Tue May  4 16:29:52 IST 2021
+# Description : Deletes Old files than 90 days
+# Thu May 13 16:20:02 IST 2021
+
+echo Please enter hostname?
+read hostname
+echo
+
+        grep -q $hostname /home/nr/Desktop/Scripts/tmp/database
+        if [ $? -eq 0 ]
+        then
+        echo ERROR -- Hostname $hostname already exist
+        echo
+        exit 0
+        fi
+
+echo Please enter IP address?
+read IP
+echo
+
+        grep -q $IP /home/nr/Desktop/Scripts/tmp/database
+        if [ $? -eq 0 ]
+        then
+        echo ERROR -- IP $IP already exist
+        echo
+        exit 0
+        fi
+
+
+echo Please enter Description?
+read description
+echo
+
+echo $hostname $IP $description >> database
+
+

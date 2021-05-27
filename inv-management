@@ -1,0 +1,16 @@
+clear
+echo
+echo Please select one of the following options:
+echo
+echo 'a = Add a record'
+echo 'd = Delete a record'
+echo
+        read choice
+
+                case $choice in
+a) /home/nr/Desktop/Scripts/tmp/add-record;;
+d) /home/nr/Desktop/Scripts/tmp/delete-record;;
+*) echo Invalid choice - Bye.
+
+                esac
+
