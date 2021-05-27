@@ -1,0 +1,30 @@
+#!/bin/bash
+
+
+
+
+
+read -r -p "Enter name of script: " script
+
+read -r -p "Whats your fullname: " fname
+
+read -r -p "Whats the description of this script: " description
+
+echo "#!/bin/bash" > /home/nr/Desktop/Scripts/tmp/${script}
+
+echo
+echo "###########################################" >> /home/nr/Desktop/Scripts/tmp/${script}
+echo
+echo "#Author: " $fname >> /home/nr/Desktop/Scripts/tmp/${script}
+echo
+echo "#Date: " $(date) >> /home/nr/Desktop/Scripts/tmp/${script}
+echo
+echo "#Description: " $description >> /home/nr/Desktop/Scripts/tmp/${script}
+echo
+echo "#Modified: " $(date) >> /home/nr/Desktop/Scripts/tmp/${script}
+echo
+echo "###########################################" >> /home/nr/Desktop/Scripts/tmp/${script}
+
+echo
+chmod a+x ${script}
+vim ${script}
